@@ -1,0 +1,11 @@
+xtends layout/layout
+block content
+	.container
+		span.site-logo.my-3 good deeds
+		p.lead.my-1 verify your
+		.row
+			.col-12
+				form(action='/index/verify' , method='post')
+					.form-group
+						input.form-control(type='text', name='accountToken', value='', placeholder='accountToken')
+					button(type='submit', name='submit') verify

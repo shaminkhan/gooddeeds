@@ -1,0 +1,26 @@
+header
+	a.site-logo.mb-2(href='/home')
+		span good deeds
+	span.mx-3.links.hidden-sm-down
+		span.search-box.ml-5
+			input(type='hidden', name='sess_id', value=session_id)
+			input.form-control.searchUser(type='search', name='search', placeholder='Search', autocomplete='off')
+			i.fa.fa-search
+			.sub-panel.sub-search
+				p.lead.py-2.px-3(style='text-align:center;color:#a9a9a9;')
+					i.fa.fa-search.mr-3
+					| Looking for someone
+		a(href='/profile/'+session_id)
+			i.fa.fa-user-o
+		a(href='/messages')
+			i.fa.fa-envelope-open-o
+		button#sub-menu.fa.fa-bell-o.notif-btn
+			.sub-panel
+				ul.notification-bar
+					
+	button.btn-notification.fa.fa-bell.bg-btn.hidden-md-up.notif-btn(style='font-size:1em;')
+	button#sub-menu.notif-btn.lg-setting.bg-btn.btn-lg-set.hidden-sm-down.mr-4(type='button')
+		i.fa.fa-th-large
+		.sub-panel
+			a(href='/update') Update Information
+			a(href='/logout') Sign out
